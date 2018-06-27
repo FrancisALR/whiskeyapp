@@ -14,7 +14,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="1280.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="admin.AdminController">
    <children>
       <TabPane layoutX="6.0" prefHeight="720.0" prefWidth="1273.0" tabClosingPolicy="UNAVAILABLE">
         <tabs>
@@ -24,15 +24,15 @@
                      <children>
                         <HBox layoutX="556.0" layoutY="15.0" prefHeight="662.0" prefWidth="703.0">
                            <children>
-                              <TableView prefHeight="662.0" prefWidth="774.0">
+                              <TableView fx:id="whiskeytable" prefHeight="662.0" prefWidth="774.0">
                                 <columns>
-                                  <TableColumn prefWidth="75.0" text="Brand" />
-                                  <TableColumn prefWidth="75.0" text="Name" />
-                                    <TableColumn prefWidth="200.0" text="Desc" />
-                                    <TableColumn prefWidth="75.0" text="Packaging" />
-                                    <TableColumn prefWidth="75.0" text="Wow" />
-                                    <TableColumn prefWidth="75.0" text="SexyNod" />
-                                    <TableColumn prefWidth="75.0" text="Rating" />
+                                  <TableColumn fx:id="brandcolumn" prefWidth="75.0" text="Brand" />
+                                  <TableColumn fx:id="namecolumn" prefWidth="75.0" text="Name" />
+                                    <TableColumn fx:id="desccolumn" prefWidth="200.0" text="Desc" />
+                                    <TableColumn fx:id="packagingcolumn" prefWidth="75.0" text="Packaging" />
+                                    <TableColumn fx:id="wowfactorcolumn" prefWidth="75.0" text="Wow" />
+                                    <TableColumn fx:id="sexynodcolumn" prefWidth="75.0" text="SexyNod" />
+                                    <TableColumn fx:id="ratingcolumn" prefWidth="75.0" text="Rating" />
                                 </columns>
                               </TableView>
                            </children>
@@ -77,7 +77,7 @@
                                     <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
                                  </VBox.margin>
                               </TextField>
-                              <Button fx:id="addButton" mnemonicParsing="false" text="Add">
+                              <Button fx:id="addButton" mnemonicParsing="false" onAction="#addWhiskey" text="Add">
                                  <opaqueInsets>
                                     <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
                                  </opaqueInsets>
@@ -93,7 +93,7 @@
                                     <Insets bottom="6.0" left="20.0" right="20.0" top="5.0" />
                                  </VBox.margin>
                               </Button>
-                              <Button fx:id="loadButton" layoutX="30.0" layoutY="526.0" mnemonicParsing="false" text="Load Data">
+                              <Button fx:id="loadButton" layoutX="30.0" layoutY="526.0" mnemonicParsing="false" onAction="#loadWhiskeyData" text="Load Data">
                                  <opaqueInsets>
                                     <Insets bottom="5.0" left="20.0" right="20.0" top="5.0" />
                                  </opaqueInsets>

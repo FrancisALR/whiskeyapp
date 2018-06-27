@@ -121,4 +121,5 @@ public class WhiskeyData {
     public void setRating(String rating) {
         this.rating.set(rating);
     }
+
 }
