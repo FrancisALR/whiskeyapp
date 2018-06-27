@@ -27,7 +27,7 @@ public class LoginModel {
         return this.connection != null;
     }
 
-    public boolean isLoggedIn(String user, String password) throws Exception{
+    public boolean isLogin(String user, String password) throws Exception{
         PreparedStatement pr = null;
         ResultSet res = null;
 
