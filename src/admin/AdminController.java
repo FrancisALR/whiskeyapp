@@ -111,7 +111,8 @@ public class AdminController implements Initializable {
             stmt.setString(7, this.packaging.getText());
             stmt.setString(8, this.rating.getText());
 
-            stmt.executeQuery();
+            stmt.executeUpdate()
+            ;
             conn.close();
 
         } catch (SQLException e) {
